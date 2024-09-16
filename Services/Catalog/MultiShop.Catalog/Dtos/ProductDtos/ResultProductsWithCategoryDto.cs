@@ -1,8 +1,8 @@
-﻿using MultiShop.DtoLayer.CatalogDtos.CategoryDtos;
+﻿using MultiShop.Catalog.Dtos.CategoryDtos;
 
-namespace MultiShop.DtoLayer.CatalogDtos.ProductDtos
+namespace MultiShop.Catalog.Dtos.ProductDtos
 {
-    public class ResultProductWithCategoryDto
+    public class ResultProductsWithCategoryDto
     {
         public string ProductID { get; set; }
         public string ProductName { get; set; }
