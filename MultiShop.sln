@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.IdentityServer", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{E8092206-379A-44DE-B13B-6B0C1B8F4E38}"
 	ProjectSection(SolutionItems) = preProject
+		LoginIndex.txt = LoginIndex.txt
+		OcelotCodeExample.txt = OcelotCodeExample.txt
 		PortNumbers.txt = PortNumbers.txt
 	EndProjectSection
 EndProject
@@ -68,15 +70,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{CA69EC2E-55FB-4895-9C82-29CEF90610C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.OcelotGateway", "ApiGateway\MultiShop.OcelotGateway\MultiShop.OcelotGateway.csproj", "{66BB6CDA-EAB1-41CD-BAE2-E51E6368C521}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.OcelotGateway", "ApiGateway\MultiShop.OcelotGateway\MultiShop.OcelotGateway.csproj", "{66BB6CDA-EAB1-41CD-BAE2-E51E6368C521}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{EBCC8D23-FDD7-4451-B669-11BC04D9C49B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Payment", "Services\Payment\MultiShop.Payment\MultiShop.Payment.csproj", "{FDFAF6AD-8624-43F4-B5A8-69FA620B914A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Payment", "Services\Payment\MultiShop.Payment\MultiShop.Payment.csproj", "{FDFAF6AD-8624-43F4-B5A8-69FA620B914A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{55D971E8-E34F-4941-8E61-DA3E216B6BB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Images", "Services\Images\MultiShop.Images\MultiShop.Images.csproj", "{F3A9C6C6-8A47-4EDD-87F4-349160C27384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Images", "Services\Images\MultiShop.Images\MultiShop.Images.csproj", "{F3A9C6C6-8A47-4EDD-87F4-349160C27384}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

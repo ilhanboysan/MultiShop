@@ -22,16 +22,24 @@
   <ItemGroup>
     <PackageReference Include="Duende.IdentityServer.Storage" Version="7.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.28" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.11" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="ExternalLibraries\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MultiShop.DtoLayer\MultiShop.DtoLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IdentityModel.AspNetCore">
+      <HintPath>..\..\..\..\..\Desktop\IdentityModel.AspNetCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

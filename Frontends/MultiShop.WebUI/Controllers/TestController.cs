@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MultiShop.DtoLayer.CatalogDtos.CategoryDtos;
+using MultiShop.WebUI.Services.CatalogServices.CategoryServices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
@@ -9,10 +10,12 @@ namespace MultiShop.WebUI.Controllers
     public class TestController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
+        private readonly ICategoryServices _categoryServices;
 
-        public TestController(IHttpClientFactory httpClientFactory)
+        public TestController(IHttpClientFactory httpClientFactory, ICategoryServices categoryServices)
         {
             _httpClientFactory = httpClientFactory;
+            _categoryServices = categoryServices;
         }
         public async Task<IActionResult> Index()
         {
@@ -25,18 +28,18 @@ namespace MultiShop.WebUI.Controllers
                     Method = HttpMethod.Post,
                     Content = new FormUrlEncodedContent(new Dictionary<string, string>
                     {
-                        {"client_id","MultiShopVisitorId"},
-                        {"client_secret","multishopsecret"},
-                        {"grant_type","client_credentials"}
-
+                        {"client_id","MultiShopVisitorId" },
+                        {"client_secret","multishopsecret" },
+                        {"grant_type","client_credentials" }
                     })
                 };
+
                 using (var response = await httpClient.SendAsync(request))
                 {
                     if (response.IsSuccessStatusCode)
                     {
-                        var contect = await response.Content.ReadAsStringAsync();
-                        var tokenResponse = JObject.Parse(contect);
+                        var content = await response.Content.ReadAsStringAsync();
+                        var tokenResponse = JObject.Parse(content);
                         token = tokenResponse["access_token"].ToString();
                     }
                 }
@@ -44,15 +47,21 @@ namespace MultiShop.WebUI.Controllers
 
             var client = _httpClientFactory.CreateClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
             var responseMessage = await client.GetAsync("https://localhost:7070/api/Categories");
             if (responseMessage.IsSuccessStatusCode)
             {
-                var jsondata = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsondata);
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsonData);
                 return View(values);
             }
-
             return View();
+        }
+
+        public async Task<IActionResult> Deneme2()
+        {
+            var values = await _categoryServices.GetAllCategoryAsync();
+            return View(values);
         }
     }
 }
