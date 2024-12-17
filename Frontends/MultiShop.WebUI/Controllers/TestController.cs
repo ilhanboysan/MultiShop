@@ -10,9 +10,9 @@ namespace MultiShop.WebUI.Controllers
     public class TestController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly ICategoryServices _categoryServices;
+        private readonly ICategoryService _categoryServices;
 
-        public TestController(IHttpClientFactory httpClientFactory, ICategoryServices categoryServices)
+        public TestController(IHttpClientFactory httpClientFactory, ICategoryService categoryServices)
         {
             _httpClientFactory = httpClientFactory;
             _categoryServices = categoryServices;
