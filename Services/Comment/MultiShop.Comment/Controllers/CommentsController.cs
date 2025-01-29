@@ -5,9 +5,9 @@ using MultiShop.Comment.Entities;
 
 namespace MultiShop.Comment.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    [AllowAnonymous]
     public class CommentsController : ControllerBase
     {
         private readonly CommentContext _context;
@@ -56,6 +56,24 @@ namespace MultiShop.Comment.Controllers
         public IActionResult CommentListByProductId(string id)
         {
             var value = _context.userComments.Where(x => x.ProductId == id).ToList();
+            return Ok(value);
+        }
+        [HttpGet("GetActiveCommentCount")]
+        public IActionResult GetActiveCommentCount()
+        {
+            int value = _context.userComments.Where(x => x.Status == true).Count();
+            return Ok(value);
+        }
+        [HttpGet("GetPassiveCommentCount")]
+        public IActionResult GetPassiveCommentCount()
+        {
+            int value = _context.userComments.Where(x => x.Status == false).Count();
+            return Ok(value);
+        }
+        [HttpGet("GetTotalCommentCount")]
+        public IActionResult GetTotalCommentCount()
+        {
+            int value = _context.userComments.Count();
             return Ok(value);
         }
 

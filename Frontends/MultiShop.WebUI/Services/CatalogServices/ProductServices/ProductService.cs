@@ -38,11 +38,12 @@ namespace MultiShop.WebUI.Services.CatalogServices.ProductServices
 
         public async Task<List<ResultProductWithCategoryDto>> GetProductsWithCategoryAsync()
         {
-            var responseMessage = await _httpClient.GetAsync("products");
+            var responseMessage = await _httpClient.GetAsync("products/ProductListWithCategory");
             var jsoData = await responseMessage.Content.ReadAsStringAsync();
             var values = JsonConvert.DeserializeObject<List<ResultProductWithCategoryDto>>(jsoData);
             return values;
         }
+
         public async Task UpdateProductAsync(UpdateProductDto updateProductDto)
         {
             await _httpClient.PutAsJsonAsync<UpdateProductDto>("products", updateProductDto);
@@ -54,5 +55,6 @@ namespace MultiShop.WebUI.Services.CatalogServices.ProductServices
             var values = JsonConvert.DeserializeObject<List<ResultProductWithCategoryDto>>(jsoData);
             return values;
         }
+
     }
 }
