@@ -1,70 +1,73 @@
-# 🛍️ MultiShop Mikroservis E-Ticaret Projesi
+# 🛍️ MultiShop Microservices E-Commerce Project
 
-# 📌 Proje Hakkında
-MultiShop, ASP.NET Core 8.0 ve Mikroservis mimarisi kullanılarak geliştirilmiş modüler ve ölçeklenebilir bir e-ticaret platformudur.
+## 📌 About the Project
 
-**Kullanıcılar, platform üzerinde**
-- ✅ Hesap oluşturabilir ve giriş yapabilir.
-- ✅ Ürünleri inceleyebilir, yorum yapabilir ve puan verebilir.
-- ✅ Sepetlerine ürün ekleyerek güvenli ödeme işlemlerini tamamlayabilir.
+**MultiShop** is a modular and scalable e-commerce platform developed using **ASP.NET Core 8.0** and **Microservices Architecture**.
 
-**Admin paneli üzerinden yöneticiler**
-- ✅ Ürün kategorileri ve yeni ürünler ekleyebilir.
-- ✅ İndirim teklifleri ve öne çıkan ürünleri güncelleyebilir.
-- ✅ Gerçek zamanlı istatistikleri takip ederek yönetimsel kararlar alabilir.
+**On the platform, users can:**
+- ✅ Create an account and log in  
+- ✅ Browse products, leave reviews, and give ratings  
+- ✅ Add products to their cart and complete secure payment transactions  
 
-# 🛠️ Kullanılan Teknolojiler
-**🖥 Backend**
-- C# & .NET Core 8.0
-- ASP.NET Core Web API
-- Mikroservis Mimarisi
-- Onion Architecture & N-Tier Architecture
-- CQRS
-- Mediator Design Pattern
-- Repository Design Pattern
+**Through the admin panel, administrators can:**
+- ✅ Manage product categories and add new products  
+- ✅ Update discount offers and featured items  
+- ✅ Monitor real-time statistics and make informed management decisions  
 
-**💾 Veri Tabanları & ORM**
-- MSSQL Server(Linux)
-- PostgreSQL
-- MongoDB
-- Redis
-- Entity Framework Core
-- Dapper
-- SSMS (SQL Server Management Studio)
-- DBeaver
+---
 
-**🔐 Güvenlik & Kimlik Doğrulama**
-   - Identity
-   - JWT (JSON Web Token)
-  - Authentication (Giriş Kontrolü)
-  - Authorization (Yetkilendirme)
+## 🛠️ Technologies Used
 
- **🎨 Frontend & UI Teknolojileri**
-  - HTML / CSS / JavaScript
-  - jQuery / AJAX
-  - Bootstrap
-  - View Component (ASP.NET Core MVC)
+### 🖥 Backend
+- C# & .NET Core 8.0  
+- ASP.NET Core Web API  
+- Microservices Architecture  
+- Onion Architecture & N-Tier Architecture  
+- CQRS Pattern  
+- Mediator Design Pattern  
+- Repository Design Pattern  
 
- **📡 Gerçek Zamanlı Haberleşme & API Gateway**
-  - SignalR
-  - RabbitMQ
-  - Bootstrap
-  - Ocelot API Gateway
+### 💾 Databases & ORM
+- Microsoft SQL Server (Linux)  
+- PostgreSQL  
+- MongoDB  
+- Redis  
+- Entity Framework Core  
+- Dapper  
+- SSMS (SQL Server Management Studio)  
+- DBeaver  
 
- **📨 Mail & API Entegrasyonları**
-  - MailKit
-  - RapidAPI
+### 🔐 Security & Authentication
+- ASP.NET Identity  
+- JWT (JSON Web Token)  
+- Authentication (Login Management)  
+- Authorization (Role-based Access Control)  
 
-**🌎 Localization & Globalization**
-- Çoklu dil desteği
+### 🎨 Frontend & UI Technologies
+- HTML / CSS / JavaScript  
+- jQuery / AJAX  
+- Bootstrap  
+- View Components (ASP.NET Core MVC)  
 
-**🛠 Geliştirme & API Test Araçları**
-- Postman
-- Swagger
+### 📡 Real-Time Communication & API Gateway
+- SignalR  
+- RabbitMQ  
+- Ocelot API Gateway  
 
-**🚀 Altyapı & Dağıtım Araçları**
-- Docker
-- Google Cloud Storage
+### 📨 Email & API Integrations
+- MailKit  
+- RapidAPI  
+
+### 🌎 Localization & Globalization
+- Multi-language support  
+
+### 🛠 Development & API Testing Tools
+- Postman  
+- Swagger  
+
+### 🚀 Infrastructure & Deployment Tools
+- Docker  
+- Google Cloud Storage  
 
 
 ![MultiShop_Diagram](https://github.com/user-attachments/assets/e7395add-066e-430e-a7cf-1114c1f3043d)
