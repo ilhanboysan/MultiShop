@@ -96,4 +96,5 @@
 
 # 📬 Contact
 - 📧 E-mail: ilhanboysan@gmail.com
-- 📌 LinkedIn: [linkedin.com/in/username](https://www.linkedin.com/in/ilhan-boysan/)
+- 📌 LinkedIn: [linkedin.com/in/ilhanboysan](https://www.linkedin.com/in/ilhan-boysan/)
+
