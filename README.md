@@ -94,6 +94,6 @@
 
 
 
-# 📬 İletişim
-- 📧 E-posta: ilhanboysan@gmail.com
+# 📬 Contact
+- 📧 E-mail: ilhanboysan@gmail.com
 - 📌 LinkedIn: [linkedin.com/in/username](https://www.linkedin.com/in/ilhan-boysan/)
